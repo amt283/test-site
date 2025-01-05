@@ -1,35 +1,42 @@
-/* The sidebar menu */
-nav.page-navigation {
-  width: 300px;
-  background-color: #ebebeb;
+.sidenav {
+  height: 100%;
+  width: 30%;
   position: fixed;
+  z-index: 1;
   top: 0;
-  left:0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-nav.page-navigation li {
-  width: 100%;
+.sidenav a {
+  padding: 6px 8px 6px 10%;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
 }
 
-/* The navigation menu links */
-nav.page-navigation a {
-  padding: 0.6em 10%;
-  width: 80%;
+.bio {
+  padding: 6px 8px 10% 10%;
+  text-decoration: none;
+  font-size: 50px;
+  color: #ffffff;
+  display: block;
 }
-  
-/* When you mouse over the navigation links, change their color */
-nav.page-navigation a:hover {
+
+.sidenav a:hover {
   color: #f1f1f1;
 }
-  
-/* Style page content */
+
 .main {
-  margin-left: 300px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+  margin-left: 30%; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 15px;
 }
-  
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
-  nav.page-navigation {padding-top: 15px;}
-  nav.page-navigation a {font-size: 18px;}
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
